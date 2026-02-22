@@ -1,19 +1,16 @@
 import { defineConfig } from "cypress";
-import browserify from "@cypress/browserify-preprocessor";
-const sqlServer = require("cypress-sql-server");
 
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      const options = browserify.defaultOptions;
-      const tasks = sqlServer.loadDBPlugin(config.env.db);
-      options.typescript = require.resolve("typescript");
-
-      on("task", { ...tasks });
-
+      on("before:browser:launch", (browser, launchOptions) => {
+        if (browser.name === "chrome") {
+          launchOptions.args.push("--disable-dev-shm-usage");
+        }
+        return launchOptions;
+      });
       return config;
     },
-    experimentalStudio: true,
     specPattern: "cypress/stepsDefinitions/**/*.step.ts",
     reporter: "junit",
     reporterOptions: {
@@ -26,7 +23,6 @@ export default defineConfig({
     viewportHeight: 768,
     defaultCommandTimeout: 5000,
     requestTimeout: 10000,
-
     supportFile: "cypress/supports/e2e.ts",
   },
 });

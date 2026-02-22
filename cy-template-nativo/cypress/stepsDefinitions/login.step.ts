@@ -35,7 +35,7 @@ describe("Esqueci a senha", () => {
     navegacaoStep.acessarPaginaPorNome("Login");
     loginPage.escreverCampo("Email", usuario.email);
     loginPage.escreverCampo("Senha", usuario.senha);
-    loginPage.clicarBotao("Fazer login");
+    loginPage.clicarBotao("Entrar");
     navegacaoStep.verificarPaginaAtual("Inicial");
   });
 
@@ -43,7 +43,7 @@ describe("Esqueci a senha", () => {
     navegacaoStep.acessarPaginaPorNome("Login");
     loginPage.escreverCampo("Email", "usuario@usuario.com");
     loginPage.escreverCampo("Senha", "Teste@123");
-    loginPage.clicarBotao("Fazer login");
+    loginPage.clicarBotao("Entrar");
     leituraStep.visualizarInformacaoToast(
       "Verifique os dados inseridos e tente novamente."
     );
@@ -67,7 +67,7 @@ describe("Esqueci a senha", () => {
     campoValor.forEach((x) => {
       navegacaoStep.acessarPaginaPorNome("Login");
       loginPage.escreverCampo(x.campo, x.valor);
-      loginPage.clicarBotao("Fazer login");
+      loginPage.clicarBotao("Entrar");
       leituraStep.visualizarInformacaoToast(x.mensagem);
     });
   });
