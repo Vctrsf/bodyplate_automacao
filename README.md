@@ -1,7 +1,7 @@
 # 🤖 Automation Boilerplate
 
 > Boilerplate de automação de testes baseado no padrão **Page Object Model (POM)**, construído com **JavaScript** e **TypeScript**.
-⚠️ Esse boilerplate ainda está sendo estruturado para ser usado como "modelo base" para futuras arquiteturas 🚧
+>⚠️ Esse boilerplate ainda está sendo estruturado para ser usado como "modelo base" para futuras arquiteturas 🚧
 ---
 
 ## 📋 Índice
