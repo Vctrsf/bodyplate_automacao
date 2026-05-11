@@ -11,7 +11,7 @@ beforeEach(() => {
 
 export class NavegacaoStep {
   // Métodos associados a URL ou Navegação.
-  visitarPortalConcais() {
+  visitarPortal() {
     cy.wait(500);
     cy.visit(URL);
   }
@@ -33,8 +33,6 @@ export class NavegacaoStep {
     const urlByTela: Partial<Record<PaginasType, string>> = {
       Inicial: "/home",
       "Esqueci a senha": "/recovery-password",
-      Equipes: "/cadastro-equipes",
-      "Cadastro de Motorista": "/cadastro-motorista"
     };
 
     cy.url().should("eq", URL + urlByTela[tela]);

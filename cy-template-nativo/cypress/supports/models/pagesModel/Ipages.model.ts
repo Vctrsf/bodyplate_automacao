@@ -9,7 +9,7 @@ export interface IPageModel<TInput, TBotao, TLink> {
   limparCampo?(campo: keyof TInput): void;
   selecionarValor?(campo: keyof TInput, valor: string): void;
   clicarBotao?(nomeBotao: keyof TBotao, index?: number): void;
-  clicarBotaoModal?(modal: keyof TInput, nomeBotao: keyof TBotao, index: number): void;
+  clicarBotaoModal?(modal: keyof TInput, nomeBotao: keyof TBotao, index?: number): void;
   clicarLink?(nomeHiperLink: keyof TLink): void;
   verificarRadioSelecionado?(campo: keyof TInput): void;
   verificarValorPreenchido?(campo: keyof TInput, valor: string): void;

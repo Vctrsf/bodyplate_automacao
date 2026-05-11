@@ -24,7 +24,7 @@ let usuario: ILoginService;
 
 describe("Esqueci a senha", () => {
   beforeEach(() => {
-    navegacaoStep.visitarPortalConcais();
+    navegacaoStep.visitarPortal();
 
     cy.fixture("acessos/acesso").then((acessos) => {
       usuario = acessos;

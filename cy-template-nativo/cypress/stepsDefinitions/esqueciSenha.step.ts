@@ -19,7 +19,7 @@ describe("Esqueci a senha", () => {
 
     cpf = Cypress.env("cpf");
     cnpj = Cypress.env("cnpj");
-    navegacaoStep.visitarPortalConcais();
+    navegacaoStep.visitarPortal();
   });
 
   it("Acesso a tela esqueci a senha.", () => {
