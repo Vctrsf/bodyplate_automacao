@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Boilerplate projeto.",
   "main": "index.js",
-  "author": "Matheus Batista dos Santos",
+  "author": "Victor Souza Fagundes",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^8.2.2",
@@ -27,7 +27,7 @@
     "@cypress/browserify-preprocessor": "^3.0.2",
     "@faker-js/faker": "^9.9.0",
     "@types/node": "^22.10.1",
-    "cypress": "^15.10.0",
+    "cypress": "^15.14.2",
     "cypress-sql-server": "^1.0.0",
     "typescript": "^5.9.3"
   }

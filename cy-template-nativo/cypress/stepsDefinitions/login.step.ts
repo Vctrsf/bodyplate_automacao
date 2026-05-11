@@ -31,7 +31,7 @@ describe("Esqueci a senha", () => {
     });
   });
 
-  it("Login Dix Aeroportos.", () => {
+  it("Login", () => {
     navegacaoStep.acessarPaginaPorNome("Login");
     loginPage.escreverCampo("Email", usuario.email);
     loginPage.escreverCampo("Senha", usuario.senha);
